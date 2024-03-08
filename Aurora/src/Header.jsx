@@ -1,36 +1,36 @@
 import { useState } from 'react';
-import './testefolhadeestilo.scss'
+import './testefolhadeestilo.scss';
 
 function Header(){
 
     const [open, setOpen] = useState(""); //primeiro negocio é o valor, e o set é para mudar o valor, e o useState é o valor que começa, nesse caso vazio
     const [abrir, setAbrir] = useState("");
+    const navBar = document.querySelector(".navBar");
     const expandir = () => {
-        if(open === "expandir") {
+        if(open === "") {
+            setOpen("expandir")
+            setAbrir("abrir")
+
+            setTimeout(() => {
+                setOpen("")
+                navBar.style.height = "42px"
+            },300)
+
+        } if(navBar.style.height === "42px") {
             setOpen("fechado")
             setAbrir("")
             
-        } else {
-            setOpen("expandir")
-            setAbrir("abrir")
+            setTimeout(() => {
+                setOpen("")
+                navBar.style.height = "14px"
+            },300)
         }
-    }
+    };
 
     const search = (e) => {
         e.stopPropagation()
     }
 
-
-
-    // const fechar = () => {
-    //     if(open === expandir) {
-    //         setFechar("")
-    //     } else {
-    //         setFechar("fechar")
-    //     }
-    // }
- //"src_bar"
- //{"src_bar " + fechar}
     return(
         <header className={"navBar " + open} onClick={expandir}>
             <input className={"src_bar " + abrir} type="text" placeholder="escreva aqui" onClick={search} />
