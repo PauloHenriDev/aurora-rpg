@@ -1,0 +1,44 @@
+.navBar {
+  display: flex;
+  margin: 0 auto;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: red;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  height: 14px;
+  cursor: pointer;
+  transition: 0.35s ease-in-out;
+}
+.navBar .src_bar {
+  display: none;
+  height: 75%;
+  width: 90%;
+  font-size: 20px;
+  border-radius: 25px;
+  border: none;
+  padding: 0 8px;
+}
+.navBar .abrir {
+  display: flex;
+}
+
+.expandir {
+  animation: expandir 0.35s ease-in-out forwards;
+}
+
+.fechado {
+  animation: fechado 0.35s ease-in-out forwards;
+}
+
+@keyframes expandir {
+  100% {
+    height: 42px;
+  }
+}
+@keyframes fechado {
+  100% {
+    height: 14px;
+  }
+}/*# sourceMappingURL=Header.css.map */

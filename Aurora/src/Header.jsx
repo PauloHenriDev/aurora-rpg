@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './testefolhadeestilo.scss';
+import './assets/Components/Header/Header.scss';
 
 function Header(){
 
@@ -15,7 +15,7 @@ function Header(){
                 setOpen("")
                 navBar.style.height = "42px"
             },300)
-
+            
         } if(navBar.style.height === "42px") {
             setOpen("fechado")
             setAbrir("")
